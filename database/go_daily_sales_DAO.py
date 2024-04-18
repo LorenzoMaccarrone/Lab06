@@ -20,4 +20,6 @@ class goDailySalesDAO:
             cursor.execute(query)
             for row in cursor:
                 result.append(row)
+        cursor.close()
+        cnx.close()
         return result

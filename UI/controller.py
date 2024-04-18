@@ -54,9 +54,12 @@ class Controller:
         for brand in lista_di_brand:
             self._view.dd_brand.options.append(ft.dropdown.Option(text=brand[0]))
         self._view.update_page()
-
+    #piuttosto che un oggetto retailer il dropdown mi resituisce il codice del retailer scelto
     def populate_dd_retailer(self):
-        pass
+        lista_di_retailer = self._model.get_retailer()
+        for retailer in lista_di_retailer:
+            self._view.dd_retailer.options.append(ft.dropdown.Option(key=retailer.code, text=retailer.name))
+        self._view.update_page()
 
     #ricordati la e per metodi che vengono chiamati all'interno di un elemento di flet
     #tutti questi leggi vengono chiamati on change di dropdown quindi devi mettere la e
@@ -70,6 +73,6 @@ class Controller:
 
 if __name__ == "__main__":
     m=Model()
-    lista=m.get_brand()
+    lista=m.get_retailer()
     for e in lista:
-        print(e)
+        print(e.name)

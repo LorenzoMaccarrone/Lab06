@@ -16,10 +16,9 @@ def main(page: ft.Page):
 ft.app(target=main)
 '''
 DA FARE:
-1)manca da inserire la possibilità di scegliere il retailer come oggetto, gli altri due sono fatti
-2)manca la parte di logica per andare a selezionare dal database secondo i filtri dati dall'utente
+1)manca la parte di logica per andare a selezionare dal database secondo i filtri dati dall'utente
   L'idea è quella di logica: o con una maggiore complessità in python, ovvero salvandosi il database
   all'interno del programma e lavorando sulle varie collections, oppure la query per trovare direttamente
   cosa ci serve
-3)manca la richiesta 2
+2)manca la richiesta 2
 '''
